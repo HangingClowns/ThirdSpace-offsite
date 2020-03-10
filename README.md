@@ -31,7 +31,6 @@ This will be the first page the user sees. It should have the following:
 
 - Select component to select student or instructor.
 - Input text field for user to enter a room id.
-- Radio button to select either Javascript ES6 or Python.
 - Button that takes the user to the Student Classroom or Instructor Dashboard depending on his/her role.
 - Each classroom should only be able to host a maximum of one student and one instructor at a time.
 - Use form validation to ensure all fields are required, and display an error if a field is missing.
@@ -42,8 +41,8 @@ This will be the first page the user sees. It should have the following:
 The Student Classroom should contain a Code Editor with three panels. The code output on the right, the code input in the middle, and package selection on the left. The specs are as follows:
 
 - The font style and color of the code input panel should mimic an IDE.
-- The Code Editor should handle Python and Javascript.
-- The package selection panel should lazy load (on scroll) a list of libraries from PIP or NPM. 
+- The Code Editor should handle Javascript.
+- The package selection panel should lazy load (on scroll) a list of libraries from NPM. 
 - Clicking on the library should enable the Code Editor to use the library.
 - Above the Code Editor there should be a “Run” button. 
 - The "Run" button should run the input code (from the server) and output its results on the right panel. 
@@ -72,12 +71,11 @@ You'll find an Express app in `packages/server`. Please build it to handle the f
 
 - Creating a new room (you can store rooms in memory if you'd like)
 - Joining a room if it exists
-- Lazy loading pip dependencies for Python 3.7
 - Lazy loading npm dependencies for Node 10
 - Code execution
 - Code submission
 
-Ensure your app is well tested and dockerized. 
+Ensure your app is well tested.
 
 ### Further Requirements
 
@@ -90,7 +88,7 @@ In addition to your frequent commits, please ensure your code is:
 Please also ensure you write tests for your functions, using Jest and relevant JS libraries. 
 
 ## **BONUS POINTS** *(in no particular order)*
-
+- Use docker
 - Use libraries (like Ramda and RxJS) that help you code using functional programming patterns.
 - Demonstrate your knowhow of container orchestration using kubernetes.
 - Use an event sourced database to handle code edits. 
