@@ -89,7 +89,7 @@ In addition to your frequent commits, please ensure your code is:
 
 Please also ensure you write tests for your functions, using Jest and relevant JS libraries. 
 
-### **BONUS POINTS** *(in no particular order)*
+## **BONUS POINTS** *(in no particular order)*
 
 - Using libraries (like Ramda and RxJS) that help you code using functional programming patterns.
 - Demonstrate your knowhow of container orchestration using kubernetes.
