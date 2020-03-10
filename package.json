@@ -7,8 +7,8 @@
     "start": "lerna run --parallel start",
     "start:client": "yarn workspace @thirdspace-offsite/client start",
     "start:server": "yarn workspace @thirdspace-offsite/server start",
-    "test": "lerna run --parallel test",
-    "test:client": "yarn workspace @thirdspace-offsite/client test",
+    "test": "yarn test:client && yarn test:server",
+    "test:client": "yarn workspace @thirdspace-offsite/client test --watchAll=false",
     "test:server": "yarn workspace @thirdspace-offsite/server test"
   },
   "devDependencies": {
@@ -19,6 +19,7 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
+    "jest": "24.9.0",
     "lerna": "^3.20.2",
     "prettier": "^1.19.1"
   },
