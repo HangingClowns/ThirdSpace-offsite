@@ -9,6 +9,10 @@ Here lies a take-home project to see if you have the chops to work at Third Spac
 
 ## Instructions
 
+1. Fork this repository into your github account.
+1. When you are done with the challenge, please make a Pull Request to the [upstream repository](https://github.com/XccelerateOrg/ThirdSpace-offsite).
+1. Inform Steve.
+
 ### Frontend
 
 You are going to build a React App comprising of three pages: 
@@ -97,6 +101,3 @@ Please also ensure you write tests for your functions, using Jest and relevant J
 - Using FaunaDB.
 - Use Redux.
 - Using Slate to build the Code Editor.
-
-## Submitting your work
-Feel free to commit and push to the master of this forked repo. When you're done, please inform Steve.
