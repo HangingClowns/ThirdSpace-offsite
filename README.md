@@ -15,7 +15,7 @@ Here lies a take-home project to see if you have the chops to work at Third Spac
 
 ### Frontend
 
-You are going to build a React App comprising of three pages: 
+You'll find a React App in `packages/client`. Please build it to contain the following three pages:
 
 1. Main Lobby
 2. Student Classroom
@@ -68,7 +68,7 @@ The Instructor Dashboard should contain a 2-panel Code Editor that shows the inp
 
 ### Backend
 
-Build an Express app that handles the following:
+You'll find an Express app in `packages/server`. Please build it to handle the following:
 
 - Creating a new room (you can store rooms in memory if you'd like)
 - Joining a room if it exists
