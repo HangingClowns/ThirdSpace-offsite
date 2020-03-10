@@ -91,13 +91,13 @@ Please also ensure you write tests for your functions, using Jest and relevant J
 
 ## **BONUS POINTS** *(in no particular order)*
 
-- Using libraries (like Ramda and RxJS) that help you code using functional programming patterns.
+- Use libraries (like Ramda and RxJS) that help you code using functional programming patterns.
 - Demonstrate your knowhow of container orchestration using kubernetes.
-- Using an event sourced database to handle code edits. 
-- Enabling saving and versioning (via event sourcing).
-- Using Typescript.
-- Using NestJS to frame your express app.
-- Microservice architecture using Lerna.
-- Using FaunaDB.
+- Use an event sourced database to handle code edits. 
+- Enable saving and versioning (via event sourcing).
+- Use Typescript.
+- Use NestJS to frame your express app.
+- Microservice architecture with Lerna.
+- Use FaunaDB.
 - Use Redux.
-- Using Slate to build the Code Editor.
+- Use Slate to build the Code Editor.
