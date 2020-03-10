@@ -17,7 +17,9 @@ You are going to build a React App comprising of three pages:
 2. Student Classroom
 3. Instructor Dashboard
 
-None of them  are required to be mobile-responsive.
+- No pages are required to be mobile-responsive.
+- Please use [Material UI](https://material-ui.com/) and [emotion/styled](https://emotion.sh/docs/styled) to style your components. 
+- No CSS or inline styling allowed!
 
 **Main Lobby**
 
