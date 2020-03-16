@@ -17,7 +17,7 @@ Here lies a take-home project to see if you have the chops to work at Third Spac
 
 You'll find a React App in `packages/client`. Please build it to contain the following three pages:
 
-1. Main Lobby
+1. Main MainLobby
 2. Student Classroom
 3. Instructor Dashboard
 
@@ -25,7 +25,7 @@ You'll find a React App in `packages/client`. Please build it to contain the fol
 - Please use [Material UI](https://material-ui.com/) and [emotion/styled](https://emotion.sh/docs/styled) to style your components. 
 - No CSS or inline styling allowed!
 
-**Main Lobby**
+**Main MainLobby**
 
 This will be the first page the user sees. It should have the following:
 
