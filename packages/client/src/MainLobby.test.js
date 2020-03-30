@@ -3,17 +3,23 @@ import React from "react";
 import {fireEvent, render} from '@testing-library/react';
 
 test('can select you are student', () => {
-    const {container, findBy} = render(<MainLobby/>);
-    const select = container.querySelector('Select');
+    const {getByTestId} = render(<MainLobby/>);
+    const select = getByTestId('role');
     // Select student
     fireEvent.change(select, {target: {value: 'student'}});
     // Verify student was selected
-    const element = findBy(/selected/);
-    expect(element.innerText).toBe('Student');
+    expect(select.value).toBe('student');
 
-    // Enter room #
-    // Verify room # is able to move forward
+    // check that cannot move forward
+    const afterRoleSubmit = getByTestId('submit');
+    expect(afterRoleSubmit.disabled).toBe(true);
+
+    const roomNumber = getByTestId('roomNumber');
+    fireEvent.change(roomNumber, {target: {value: '123'}});
 
     // Verify can move forward with submit button
+    const afterRoomSubmit = getByTestId('submit');
+    expect(afterRoomSubmit.disabled).toBe(false);
+
     // Clicking on submit will take student to StudentClassroom
 });
