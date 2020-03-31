@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {NativeSelect, Grid, Paper, TextField, Button} from "@material-ui/core";
+import {FormControl, NativeSelect, Grid, Paper, TextField, Button, InputLabel} from "@material-ui/core";
 import styled from "@emotion/styled";
 
 const PaperPadded = styled(Paper)`
@@ -11,9 +11,10 @@ const SubmitButton = styled(Button) `
     align-self: center;
 `;
 
-function MainLobby() {
+function MainLobby({proceedFunction}) {
     const [role, setRole] = useState('teacher');
     const [roomNumber, setRoomNumber] = useState('');
+    const hasRoomError = roomNumber.length === 0;
     return <div className="main-lobby">
         <Grid container>
             <Grid item md={4}/>
@@ -21,12 +22,15 @@ function MainLobby() {
                 <PaperPadded>
                     <form>
                         <Grid container justify="center" direction="column">
-                            <NativeSelect value={role} onChange={(e) => setRole(e.target.value)} inputProps={{ "data-testid": "role" }}>
-                                <option value="teacher">Teacher</option>
-                                <option value="student">Student</option>
-                            </NativeSelect>
-                            <TextField label="Room Number" value={roomNumber} onChange={(e) => setRoomNumber(e.target.value)} inputProps={{ "data-testid": "roomNumber" }}/>
-                            <SubmitButton data-testid="submit" disabled={role.length === 0 || roomNumber.length === 0} color="primary" variant="contained">Move on</SubmitButton>
+                            <FormControl>
+                                <InputLabel htmlFor="role">Role</InputLabel>
+                                <NativeSelect value={role} onChange={(e) => setRole(e.target.value)} inputProps={{ "data-testid": "role", id: "role" }}>
+                                    <option value="teacher">Teacher</option>
+                                    <option value="student">Student</option>
+                                </NativeSelect>
+                            </FormControl>
+                            <TextField label="Room Number" value={roomNumber} onChange={(e) => setRoomNumber(e.target.value)} inputProps={{ "data-testid": "roomNumber" }} error={hasRoomError} helperText={hasRoomError ? 'Need a room number' : null}/>
+                            <SubmitButton data-testid="submit" disabled={role.length === 0 || hasRoomError} color="primary" variant="contained" onClick={(e) => proceedFunction(role, roomNumber)}>Move on</SubmitButton>
                         </Grid>
                     </form>
                 </PaperPadded>
